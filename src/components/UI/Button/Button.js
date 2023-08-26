@@ -1,10 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import './Button.css';
+import "./Button.css";
 
-const Button = props => {
+const Button = (props) => {
   return (
-    <button type={props.type} className="button" onClick={props.onClick}>
+    <button
+      type={props.type}
+      className={`${!props.isValid ? "button-submit" : "button"}`}
+      onClick={props.onClick}
+    >
       {props.children}
     </button>
   );
